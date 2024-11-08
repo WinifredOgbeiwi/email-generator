@@ -48,8 +48,8 @@ namespace email_generator
             //output.Text = all;
 
             Generator generatorEmail = new Generator();
-            generatorEmail.name = name;
-            generatorEmail.surname = surname;
+            generatorEmail.name = name.ToLower();
+            generatorEmail.surname = surname.ToLower();
             generatorEmail.position = position;
             generatorEmail.randomNo = GetRandomNo();
 

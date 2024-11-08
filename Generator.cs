@@ -14,8 +14,14 @@ namespace email_generator
         public int randomNo;
         public string Generate()
         {
+          char firstLetter = name[0];
+            string shortenSurname;
+            if (surname.Length > 5) shortenSurname = surname.Substring(0, 5);
+            else shortenSurname = surname;
+         
           string  email = "";
-            email += name + "." + surname + randomNo + "@" + position + "." + "vistula.edu.pl";
+
+          email += firstLetter + "." + shortenSurname + randomNo + "@" + position + "." + "vistula.edu.pl";
             return email;
         }
     }
