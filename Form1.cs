@@ -16,5 +16,20 @@ namespace email_generator
         {
             InitializeComponent();
         }
+
+        private void surname_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void randomNo_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
