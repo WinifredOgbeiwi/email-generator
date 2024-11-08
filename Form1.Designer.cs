@@ -30,16 +30,15 @@
         {
             this.name = new System.Windows.Forms.Label();
             this.surname = new System.Windows.Forms.Label();
-            this.randomNo = new System.Windows.Forms.Label();
             this.nameTextBox = new System.Windows.Forms.TextBox();
             this.surnameTextBox = new System.Windows.Forms.TextBox();
-            this.randomNoTextBox = new System.Windows.Forms.TextBox();
             this.position = new System.Windows.Forms.GroupBox();
             this.adminRadioButton = new System.Windows.Forms.RadioButton();
             this.studentRadioButton = new System.Windows.Forms.RadioButton();
             this.generateButton = new System.Windows.Forms.Button();
             this.output = new System.Windows.Forms.TextBox();
             this.header = new System.Windows.Forms.Label();
+            this.finalOutput = new System.Windows.Forms.Label();
             this.position.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -62,16 +61,6 @@
             this.surname.Text = "Surname";
             this.surname.Click += new System.EventHandler(this.surname_Click);
             // 
-            // randomNo
-            // 
-            this.randomNo.AutoSize = true;
-            this.randomNo.Location = new System.Drawing.Point(184, 184);
-            this.randomNo.Name = "randomNo";
-            this.randomNo.Size = new System.Drawing.Size(94, 20);
-            this.randomNo.TabIndex = 2;
-            this.randomNo.Text = "Random No";
-            this.randomNo.Click += new System.EventHandler(this.randomNo_Click);
-            // 
             // nameTextBox
             // 
             this.nameTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -88,19 +77,11 @@
             this.surnameTextBox.Size = new System.Drawing.Size(273, 26);
             this.surnameTextBox.TabIndex = 4;
             // 
-            // randomNoTextBox
-            // 
-            this.randomNoTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.randomNoTextBox.Location = new System.Drawing.Point(303, 180);
-            this.randomNoTextBox.Name = "randomNoTextBox";
-            this.randomNoTextBox.Size = new System.Drawing.Size(273, 26);
-            this.randomNoTextBox.TabIndex = 5;
-            // 
             // position
             // 
             this.position.Controls.Add(this.studentRadioButton);
             this.position.Controls.Add(this.adminRadioButton);
-            this.position.Location = new System.Drawing.Point(188, 236);
+            this.position.Location = new System.Drawing.Point(188, 187);
             this.position.Name = "position";
             this.position.Size = new System.Drawing.Size(147, 100);
             this.position.TabIndex = 6;
@@ -131,7 +112,7 @@
             // 
             // generateButton
             // 
-            this.generateButton.Location = new System.Drawing.Point(357, 243);
+            this.generateButton.Location = new System.Drawing.Point(357, 194);
             this.generateButton.Name = "generateButton";
             this.generateButton.Size = new System.Drawing.Size(219, 93);
             this.generateButton.TabIndex = 7;
@@ -141,9 +122,9 @@
             // 
             // output
             // 
-            this.output.Location = new System.Drawing.Point(188, 372);
+            this.output.Location = new System.Drawing.Point(303, 305);
             this.output.Name = "output";
-            this.output.Size = new System.Drawing.Size(388, 26);
+            this.output.Size = new System.Drawing.Size(273, 26);
             this.output.TabIndex = 8;
             // 
             // header
@@ -156,19 +137,27 @@
             this.header.TabIndex = 9;
             this.header.Text = "Email Generator";
             // 
+            // finalOutput
+            // 
+            this.finalOutput.AutoSize = true;
+            this.finalOutput.Location = new System.Drawing.Point(184, 311);
+            this.finalOutput.Name = "finalOutput";
+            this.finalOutput.Size = new System.Drawing.Size(53, 20);
+            this.finalOutput.TabIndex = 10;
+            this.finalOutput.Text = "Ouput";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.finalOutput);
             this.Controls.Add(this.header);
             this.Controls.Add(this.output);
             this.Controls.Add(this.generateButton);
             this.Controls.Add(this.position);
-            this.Controls.Add(this.randomNoTextBox);
             this.Controls.Add(this.surnameTextBox);
             this.Controls.Add(this.nameTextBox);
-            this.Controls.Add(this.randomNo);
             this.Controls.Add(this.surname);
             this.Controls.Add(this.name);
             this.Name = "Form1";
@@ -184,16 +173,15 @@
 
         private System.Windows.Forms.Label name;
         private System.Windows.Forms.Label surname;
-        private System.Windows.Forms.Label randomNo;
         private System.Windows.Forms.TextBox nameTextBox;
         private System.Windows.Forms.TextBox surnameTextBox;
-        private System.Windows.Forms.TextBox randomNoTextBox;
         private System.Windows.Forms.GroupBox position;
         private System.Windows.Forms.RadioButton adminRadioButton;
         private System.Windows.Forms.RadioButton studentRadioButton;
         private System.Windows.Forms.Button generateButton;
         private System.Windows.Forms.TextBox output;
         private System.Windows.Forms.Label header;
+        private System.Windows.Forms.Label finalOutput;
     }
 }
 

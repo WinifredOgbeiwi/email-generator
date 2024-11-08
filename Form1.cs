@@ -34,17 +34,26 @@ namespace email_generator
 
         private void generateButton_Click(object sender, EventArgs e)
         {
-            string name, surname, positionRole = "", all;
+            string name, surname, position = "", all;
             name = nameTextBox.Text;
             surname = surnameTextBox.Text;
-            if (adminRadioButton.Checked) positionRole = "adm";
+            if (adminRadioButton.Checked) position = "adm";
 
-            if (studentRadioButton.Checked) positionRole = "stu";
+            if (studentRadioButton.Checked) position = "stu";
 
-            all = name + surname + positionRole;
+            all = name + surname + position;
             output.Text = all;
 
-           
+            Generator generatorEmail = new Generator();
+            generatorEmail.name = name;
+            generatorEmail.surname = surname;
+            generatorEmail.position = position;
+            output.Text = generatorEmail.generate();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

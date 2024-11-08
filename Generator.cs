@@ -8,6 +8,12 @@ namespace email_generator
 {
     internal class Generator
     {
-    
+      public string name;
+      public string surname;
+      public string position;
+        public string generate()
+        {
+            return "Hello";
+        }
     }
 }
