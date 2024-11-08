@@ -53,8 +53,10 @@ namespace email_generator
             generatorEmail.position = position;
             generatorEmail.randomNo = GetRandomNo();
 
-            int r = GetRandomNo();
-            output.Text = r.ToString();
+            //int r = GetRandomNo();
+           // output.Text = r.ToString();
+
+            output.Text = generatorEmail.Generate();
         }
 
        

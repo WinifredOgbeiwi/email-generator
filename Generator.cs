@@ -12,9 +12,11 @@ namespace email_generator
       public string surname;
       public string position;
         public int randomNo;
-        public string generate()
+        public string Generate()
         {
-            return "Hello";
+          string  email = "";
+            email += name + "." + surname + randomNo + "@" + position + "." + "vistula.edu.pl";
+            return email;
         }
     }
 }
