@@ -16,6 +16,12 @@ namespace email_generator
         {
             InitializeComponent();
         }
+        int GetRandomNo() 
+        {
+            Random rnd = new Random();
+            int randomNo = rnd.Next(100, 900);
+            return Convert.ToInt32(randomNo);
+        }
 
         private void surname_Click(object sender, EventArgs e)
         {
@@ -27,33 +33,30 @@ namespace email_generator
 
         }
 
-        private void radioButton1_CheckedChanged(object sender, EventArgs e)
-        {
 
-        }
 
         private void generateButton_Click(object sender, EventArgs e)
         {
+        
             string name, surname, position = "", all;
             name = nameTextBox.Text;
             surname = surnameTextBox.Text;
             if (adminRadioButton.Checked) position = "adm";
-
             if (studentRadioButton.Checked) position = "stu";
 
-            all = name + surname + position;
-            output.Text = all;
+           // all = name + surname + position;
+            //output.Text = all;
 
             Generator generatorEmail = new Generator();
             generatorEmail.name = name;
             generatorEmail.surname = surname;
             generatorEmail.position = position;
-            output.Text = generatorEmail.generate();
+            generatorEmail.randomNo = GetRandomNo();
+
+            int r = GetRandomNo();
+            output.Text = r.ToString();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
+       
     }
 }

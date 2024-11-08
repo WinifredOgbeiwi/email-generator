@@ -11,6 +11,7 @@ namespace email_generator
       public string name;
       public string surname;
       public string position;
+        public int randomNo;
         public string generate()
         {
             return "Hello";
