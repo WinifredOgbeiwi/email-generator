@@ -38,7 +38,7 @@
             this.adminRadioButton = new System.Windows.Forms.RadioButton();
             this.studentRadioButton = new System.Windows.Forms.RadioButton();
             this.generateButton = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.output = new System.Windows.Forms.TextBox();
             this.header = new System.Windows.Forms.Label();
             this.position.SuspendLayout();
             this.SuspendLayout();
@@ -137,13 +137,14 @@
             this.generateButton.TabIndex = 7;
             this.generateButton.Text = "Generate";
             this.generateButton.UseVisualStyleBackColor = true;
+            this.generateButton.Click += new System.EventHandler(this.generateButton_Click);
             // 
-            // textBox1
+            // output
             // 
-            this.textBox1.Location = new System.Drawing.Point(188, 372);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(388, 26);
-            this.textBox1.TabIndex = 8;
+            this.output.Location = new System.Drawing.Point(188, 372);
+            this.output.Name = "output";
+            this.output.Size = new System.Drawing.Size(388, 26);
+            this.output.TabIndex = 8;
             // 
             // header
             // 
@@ -161,7 +162,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.header);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.output);
             this.Controls.Add(this.generateButton);
             this.Controls.Add(this.position);
             this.Controls.Add(this.randomNoTextBox);
@@ -191,7 +192,7 @@
         private System.Windows.Forms.RadioButton adminRadioButton;
         private System.Windows.Forms.RadioButton studentRadioButton;
         private System.Windows.Forms.Button generateButton;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox output;
         private System.Windows.Forms.Label header;
     }
 }

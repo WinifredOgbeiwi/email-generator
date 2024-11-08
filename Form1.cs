@@ -31,5 +31,20 @@ namespace email_generator
         {
 
         }
+
+        private void generateButton_Click(object sender, EventArgs e)
+        {
+            string name, surname, positionRole = "", all;
+            name = nameTextBox.Text;
+            surname = surnameTextBox.Text;
+            if (adminRadioButton.Checked) positionRole = "adm";
+
+            if (studentRadioButton.Checked) positionRole = "stu";
+
+            all = name + surname + positionRole;
+            output.Text = all;
+
+           
+        }
     }
 }
