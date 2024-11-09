@@ -36,9 +36,9 @@
             this.adminRadioButton = new System.Windows.Forms.RadioButton();
             this.studentRadioButton = new System.Windows.Forms.RadioButton();
             this.generateButton = new System.Windows.Forms.Button();
-            this.output = new System.Windows.Forms.TextBox();
             this.header = new System.Windows.Forms.Label();
             this.finalOutput = new System.Windows.Forms.Label();
+            this.output = new System.Windows.Forms.Label();
             this.position.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -120,13 +120,6 @@
             this.generateButton.UseVisualStyleBackColor = true;
             this.generateButton.Click += new System.EventHandler(this.generateButton_Click);
             // 
-            // output
-            // 
-            this.output.Location = new System.Drawing.Point(303, 305);
-            this.output.Name = "output";
-            this.output.Size = new System.Drawing.Size(273, 26);
-            this.output.TabIndex = 8;
-            // 
             // header
             // 
             this.header.AutoSize = true;
@@ -146,14 +139,25 @@
             this.finalOutput.TabIndex = 10;
             this.finalOutput.Text = "Ouput";
             // 
+            // output
+            // 
+            this.output.AutoSize = true;
+            this.output.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.output.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.output.Location = new System.Drawing.Point(282, 311);
+            this.output.Name = "output";
+            this.output.Size = new System.Drawing.Size(127, 22);
+            this.output.TabIndex = 11;
+            this.output.Text = "Generating...";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.output);
             this.Controls.Add(this.finalOutput);
             this.Controls.Add(this.header);
-            this.Controls.Add(this.output);
             this.Controls.Add(this.generateButton);
             this.Controls.Add(this.position);
             this.Controls.Add(this.surnameTextBox);
@@ -179,9 +183,9 @@
         private System.Windows.Forms.RadioButton adminRadioButton;
         private System.Windows.Forms.RadioButton studentRadioButton;
         private System.Windows.Forms.Button generateButton;
-        private System.Windows.Forms.TextBox output;
         private System.Windows.Forms.Label header;
         private System.Windows.Forms.Label finalOutput;
+        private System.Windows.Forms.Label output;
     }
 }
 
